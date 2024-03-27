@@ -2,10 +2,12 @@
 <html>
   <head></head>
   <body>
-    <h1>Click and drag the link to the bookmarks bar.</h1>
+    <h1>Click and drag the link below to the bookmarks bar.</h1>
+    <a></a>
     <script>
       var data = eval(atob(location.hash.slice(1)));
-      
+      document.querySelector("a").href = data[0];
+      document.querySelector("a").innerText = data[1];
     </script>
   </body>
 </html>
