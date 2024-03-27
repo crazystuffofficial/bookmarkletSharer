@@ -6,7 +6,7 @@
         return string.split("").reverse().join("");
       }
       function share(bookmarklet, name){
-        location.href = encodeURIComponent(reverse(reverse(location.pathname).replace(reverse("bookmarkletGenerator.html"), reverse("shareBookmarklet.html#"))) + btoa('["' + bookmarklet + '", "' + name + '"]'));
+        location.href = reverse(reverse(location.pathname).replace(reverse("bookmarkletGenerator.html"), reverse("shareBookmarklet.html#"))) + btoa('["' + bookmarklet + '", "' + name + '"]');
       }
     </script>
   </head>
