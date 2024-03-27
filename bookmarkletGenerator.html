@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function reverse(string){
+        return string.split("").reverse().join("");
+      }
+      function share(bookmarklet, name){
+        location.href = encodeURIComponent(reverse(reverse(location.path).replace(reverse("bookmarkletGenerator.html"), reverse("shareBookmarklet.html#"))) + atob('["' + bookmarklet + '", "' + name + '"]'));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Bookmarklet sharer</h1>
+    <input placeholder="Put the name of the bookmarklet"><br>
+    <textarea placeholder="Put the bookmarklet url"></textarea><br>
+    <button onclick="alert('Redirecting to sharing url. Copy the sharing url and give it to someone'); share(document.querySelector('textarea').value, document.querySelector('input').value);"></button>
+  </body>
+</html>
